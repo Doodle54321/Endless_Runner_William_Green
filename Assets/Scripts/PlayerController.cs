@@ -72,6 +72,7 @@ public class PlayerController : MonoBehaviour
        {
            isOnGround = true;
            dirtParticle.Play();
+           Debug.Log($"{isOnGround}");
        }
 
 

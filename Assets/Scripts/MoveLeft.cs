@@ -6,17 +6,19 @@ public class MoveLeft : MonoBehaviour
    private int currentSpeed;
    private Vector3 startPos;
    private float repeatWidth;
+   private Rigidbody rigidbody;
 
 
    void Start()
    {
+       rigidbody = GetComponent<Rigidbody>();
        startPos = transform.position;
        repeatWidth = GetComponent<BoxCollider>().size.x / 2;
    }
 
 
    // Update is called once per frame
-   void Update()
+   void FixedUpdate()
    {
        currentSpeed = GameManager.Instance.speed;
        MoveToTheLeft();
@@ -30,7 +32,8 @@ public class MoveLeft : MonoBehaviour
    {
        if(!GameManager.Instance.gameOver)
        {
-           transform.Translate(Vector3.left * Time.deltaTime * currentSpeed);
+           //transform.Translate(Vector3.left * Time.deltaTime * currentSpeed);
+           rigidbody.linearVelocity = Vector3.left * currentSpeed;
        }
    }
 
