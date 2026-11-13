@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="screen-container" style="flex-grow: 1; background-color: rgb(44, 34, 28); padding: 20px; justify-content: space-between;">
+        <ui:VisualElement name="top-bar" style="flex-direction: row; justify-content: space-between; align-items: center;">
+            <ui:Label name="score-label" text="Score: 0" style="color: rgb(220, 190, 130); font-size: 24px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Minecraft.ttf?fileID=12800000&amp;guid=4a3d8c9cc8e354e9d9f1e83b6e19a877&amp;type=3#Minecraft&quot;);"/>
+            <ui:Label name="time-label" text="Time Remaining: 0" style="color: rgb(220, 190, 130); font-size: 24px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Assets/Minecraft.ttf?fileID=12800000&amp;guid=4a3d8c9cc8e354e9d9f1e83b6e19a877&amp;type=3#Minecraft&quot;);"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="center-content" style="align-items: center; justify-content: center;">
+            <ui:RadioButtonGroup name="game-mode-group" style="margin-bottom: 25px;">
+                <ui:RadioButton name="infinite-mode-radio" text="Infinite Quest" value="true" style="color: rgb(240, 220, 180); font-size: 18px; margin-bottom: 10px; -unity-font-definition: url(&quot;project://database/Assets/Minecraft.ttf?fileID=12800000&amp;guid=4a3d8c9cc8e354e9d9f1e83b6e19a877&amp;type=3#Minecraft&quot;);"/>
+                <ui:RadioButton name="timed-mode-radio" text="One Minute Challenge" style="color: rgb(240, 220, 180); font-size: 18px; -unity-font-definition: url(&quot;project://database/Assets/Minecraft.ttf?fileID=12800000&amp;guid=4a3d8c9cc8e354e9d9f1e83b6e19a877&amp;type=3#Minecraft&quot;);"/>
+            </ui:RadioButtonGroup>
+            <ui:Button name="start-button" text="Begin Quest" style="width: 180px; height: 50px; background-color: rgb(139, 44, 38); color: rgb(255, 235, 190); font-size: 20px; -unity-font-style: bold; border-width: 4px; border-color: rgb(80, 20, 20); border-radius: 0; -unity-font-definition: url(&quot;project://database/Assets/Minecraft.ttf?fileID=12800000&amp;guid=4a3d8c9cc8e354e9d9f1e83b6e19a877&amp;type=3#Minecraft&quot;);"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="bottom-spacer" style="height: 40px;"/>
+    </ui:VisualElement>
+</ui:UXML>
