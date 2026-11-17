@@ -13,7 +13,7 @@ public class MoveLeft : MonoBehaviour
    {
        rigidbody = GetComponent<Rigidbody>();
        startPos = transform.position;
-       repeatWidth = GetComponent<BoxCollider>().size.x / 2;
+       repeatWidth = (GetComponent<BoxCollider>().size.x * transform.localScale.x) / 3; 
    }
 
 
